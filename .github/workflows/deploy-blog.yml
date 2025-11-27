@@ -22,11 +22,11 @@ jobs:
     - name: Extract blog-generator
       run: |
         tar -xf blog_generator-x86_64-unknown-linux-gnu.tar.xz
-        chmod +x blog_generator
+        chmod +x blog_generator-x86_64-unknown-linux-gnu/blog_generator
 
     - name: Generate HTML
       run: |
-        ./blog_generator --input test_post.md --output test_post.html
+        ./blog_generator-x86_64-unknown-linux-gnu/blog_generator --input test_post.md --output test_post.html
 
     - name: Deploy to blog branch
       run: |
